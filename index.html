@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwimCloud Point Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3 style="text-align: center;">Swimcloud Score Calculator</h3>
+    <div id="center" style="text-align: center; padding-top:0px">
+        <form id="eventSubmission">
+            <div id="ev">
+                <label for="event_1">Event 1:</label>
+                <select name="events" id="event_1">
+                    <option value="50fr">50FR</option>
+                    <option value="100fr">100FR</option>
+                    <option value="200fr">200FR</option>
+                    <option value="500fr">500FR</option>
+                    <option value="1650fr">1650FR</option>
+                    <option value="50bk">50BK</option>
+                    <option value="100bk">100BK</option>
+                    <option value="200bk">200BK</option>
+                    <option value="50br">50BR</option>
+                    <option value="100br">100BR</option>
+                    <option value="200br">200BR</option>
+                    <option value="50fl">50FL</option>
+                    <option value="100fl">100FL</option>
+                    <option value="200fl">200FL</option>
+                    <option value="200im">200IM</option>
+                    <option value="400im">400IM</option>
+                </select>
+
+                <label for="event_1_min">Minutes: </label>
+                <input id="event_1_min" type="number" placeholder="0">
+                <label for="event_1_sec">Seconds: </label>
+                <input id="event_1_sec" type="number" placeholder="0">
+                <label for="event_1_mil">Decimal (two places): </label>
+                <input id="event_1_mil" type="number" placeholder="0">
+
+            </div>
+            <div id="ev">
+                <label for="event_2">Event 2:</label>
+                <select name="events" id="event_2">
+                    <option value="50fr">50FR</option>
+                    <option value="100fr">100FR</option>
+                    <option value="200fr">200FR</option>
+                    <option value="500fr">500FR</option>
+                    <option value="1650fr">1650FR</option>
+                    <option value="50bk">50BK</option>
+                    <option value="100bk">100BK</option>
+                    <option value="200bk">200BK</option>
+                    <option value="50br">50BR</option>
+                    <option value="100br">100BR</option>
+                    <option value="200br">200BR</option>
+                    <option value="50fl">50FL</option>
+                    <option value="100fl">100FL</option>
+                    <option value="200fl">200FL</option>
+                    <option value="200im">200IM</option>
+                    <option value="400im">400IM</option>
+                </select>
+
+                <label for="event_2_min">Minutes: </label>
+                <input id="event_2_min" type="number" placeholder="0">
+                <label for="event_2_sec">Seconds: </label>
+                <input id="event_2_sec" type="number" placeholder="0">
+                <label for="event_2_mil">Decimal (two places): </label>
+                <input id="event_2_mil" type="number" placeholder="0">
+
+            </div>
+            <div id="ev">
+                <label for="event_3">Event 3:</label>
+                <select name="events" id="event_3">
+                    <option value="50fr">50FR</option>
+                    <option value="100fr">100FR</option>
+                    <option value="200fr">200FR</option>
+                    <option value="500fr">500FR</option>
+                    <option value="1650fr">1650FR</option>
+                    <option value="50bk">50BK</option>
+                    <option value="100bk">100BK</option>
+                    <option value="200bk">200BK</option>
+                    <option value="50br">50BR</option>
+                    <option value="100br">100BR</option>
+                    <option value="200br">200BR</option>
+                    <option value="50fl">50FL</option>
+                    <option value="100fl">100FL</option>
+                    <option value="200fl">200FL</option>
+                    <option value="200im">200IM</option>
+                    <option value="400im">400IM</option>
+                </select>
+
+                <label for="event_3_min">Minutes: </label>
+                <input id="event_3_min" type="number" placeholder="0">
+                <label for="event_3_sec">Seconds: </label>
+                <input id="event_3_sec" type="number" placeholder="0">
+                <label for="event_3_mil">Decimal (two places): </label>
+                <input id="event_3_mil" type="number" placeholder="0">
+
+            </div>
+            <div class="ev_4">
+                <label for="event_4">Event 4:</label>
+                <select name="events" id="event_4">
+                    <option value="50fr">50FR</option>
+                    <option value="100fr">100FR</option>
+                    <option value="200fr">200FR</option>
+                    <option value="500fr">500FR</option>
+                    <option value="1650fr">1650FR</option>
+                    <option value="50bk">50BK</option>
+                    <option value="100bk">100BK</option>
+                    <option value="200bk">200BK</option>
+                    <option value="50br">50BR</option>
+                    <option value="100br">100BR</option>
+                    <option value="200br">200BR</option>
+                    <option value="50fl">50FL</option>
+                    <option value="100fl">100FL</option>
+                    <option value="200fl">200FL</option>
+                    <option value="200im">200IM</option>
+                    <option value="400im">400IM</option>
+                </select>
+
+                <label for="event_4_min">Minutes: </label>
+                <input id="event_4_min" type="number" placeholder="0">
+                <label for="event_4_sec">Seconds: </label>
+                <input id="event_4_sec" type="number" placeholder="0">
+                <label for="event_4_mil">Decimal (two places): </label>
+                <input id="event_4_mil" type="number" placeholder="0">
+
+            </div>
+            <input id="btn" type="submit" value="Calculate my Score">
+        </form>
+    </div>
+    <div id="result" style="text-align: center; color:blue">
+        <h3 id="number"></h3>
+    </div>
+</body>
+<script>
+    var names = ["50fr", "100fr", "200fr", "500fr", "1650fr", "50bk", "100bk", "200bk", "50br", "100br", "200br", "50fl", "100fl", "200fl", "200im", "400im"]
+    var times = [17.63, 39.90, 89.15, 246.32, 852.08, 20.08, 43.35, 95.73, 23.56, 49.69, 107.91, 20.10, 42.80, 97.35, 97.69, 212.88]
+
+    var form = document.getElementById("eventSubmission")
+    form.addEventListener("submit", function (event) {
+        event.preventDefault()
+        var event1event = document.getElementById("event_1").value
+        console.log(event1event)
+
+        var event1Time = +document.getElementById("event_1_min").value * 60 + +document.getElementById("event_1_sec").value + +document.getElementById("event_1_mil").value / 100
+        console.log(event1Time)
+
+
+        var event2event = document.getElementById("event_2").value
+        console.log(event2event)
+
+        var event2Time = +document.getElementById("event_2_min").value * 60 + +document.getElementById("event_2_sec").value + +document.getElementById("event_2_mil").value / 100
+        console.log(event2Time)
+
+        var event3event = document.getElementById("event_3").value
+        console.log(event3event)
+
+        var event3Time = +document.getElementById("event_3_min").value * 60 + +document.getElementById("event_3_sec").value + +document.getElementById("event_3_mil").value / 100
+        console.log(event3Time)
+
+        var event4event = document.getElementById("event_4").value
+        console.log(event4event)
+
+        var event4Time = +document.getElementById("event_4_min").value * 60 + +document.getElementById("event_4_sec").value + +document.getElementById("event_4_mil").value / 100
+        console.log(event4Time)
+
+        var numTrack1 = 0;
+        var numTrack2 = 0;
+        var numTrack3 = 0;
+        var numTrack4 = 0;
+
+        for (let i = 0; i < names.length; i++) {
+            if (event1event == names[i]) {
+                numTrack1 = i
+            }
+            if (event2event == names[i]) {
+                numTrack2 = i
+            }
+            if (event3event == names[i]) {
+                numTrack3 = i
+            }
+            if (event4event == names[i]) {
+                numTrack4 = i
+            }
+        }
+
+        // console.log(times[numTrack1])
+        // console.log(times[numTrack2])
+        // console.log(times[numTrack3])
+        // console.log(times[numTrack4])
+
+        var score = 0.4 * ((times[numTrack1] / event1Time) ** 3) * 1000 + 0.4 * ((times[numTrack2] / event2Time) ** 3) * 1000 + 0.15 * ((times[numTrack3] / event3Time) ** 3) * 1000 + 0.05 * ((times[numTrack4] / event4Time) ** 3) * 1000
+        console.log(score)
+
+        const text = document.createElement("h3")
+        const node = document.createTextNode("Your swimcloud score is: " + score)
+        text.appendChild(node)
+        text.setAttribute('id', "number")
+
+        const el = document.getElementById("result")
+        const chil = document.getElementById("number")
+        el.replaceChild(text, chil)
+    })  
+</script>
+
+</html>
